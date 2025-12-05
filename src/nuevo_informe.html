@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Protocolo Síndrome de Down</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 2cm 1.5cm;
+        }
+        
+        /* @page :nth-child(3) { ... } removed because pseudo-classes are not allowed in @page rules */
+        /* If you need different page styles, use named pages with CSS3 Paged Media or handle with print settings */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+        }
+        
+        .page {
+            width: 21.59cm;
+            min-height: auto;
+            padding: 1.5cm;
+            page-break-after: always;
+            background: white;
+        }
+        
+        .page:last-child {
+            page-break-after: auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 1cm;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 0.6cm;
+        }
+        
+        .header h1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.3cm;
+        }
+        
+        .header h2 {
+            font-size: 14px;
+            color: #34495e;
+            margin-bottom: 0.2cm;
+        }
+        
+        .header .metadata {
+            font-size: 9px;
+            color: #7f8c8d;
+            margin-top: 0.3cm;
+        }
+        
+        .section {
+            margin-bottom: 0.8cm;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            background-color: #ecf0f1;
+            padding: 0.3cm 0.5cm;
+            border-left: 4px solid #3498db;
+            margin-bottom: 0.4cm;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6cm;
+            margin-bottom: 0.4cm;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 0.2cm;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            width: 40%;
+            min-width: 120px;
+        }
+        
+        .info-value {
+            color: #34495e;
+            flex: 1;
+        }
+        
+        .metrics-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8cm;
+            margin: 0.6cm 0;
+        }
+
+        .metric-box {
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 0.6cm;
+            background-color: #f8f9fa;
+        }
+
+        .metric-box.full-span {
+            grid-column: 1 / -1;
+        }
+        
+        .metric-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.3cm;
+            text-align: center;
+        }
+        
+        .metric-percentage {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0.3cm;
+            color: #27ae60;
+        }
+        
+        .metric-details {
+            font-size: 10px;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        .metric-subtitle {
+            font-size: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0.35cm 0 0.15cm 0;
+            text-align: left;
+        }
+
+        .metric-age-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.25cm 0.25cm;
+            margin-top: 0.15cm;
+        }
+
+        .metric-age-item {
+            background: #fff;
+            border: 1px solid #e0e6e8;
+            border-radius: 4px;
+            padding: 0.35cm;
+        }
+
+        .metric-age-item-current {
+            border-color: #27ae60;
+            box-shadow: 0 1px 3px rgba(39, 174, 96, 0.12);
+        }
+
+        .metric-age-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.1cm;
+        }
+
+        .metric-age-label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .metric-age-percent {
+            font-size: 12px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .progress-bar-small {
+            height: 10px;
+            margin: 0.2cm 0;
+        }
+
+        .metric-age-item .metric-details {
+            margin: 0;
+            text-align: left;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 15px;
+            background-color: #ecf0f1;
+            border-radius: 7px;
+            margin: 0.3cm 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #27ae60, #2ecc71);
+            border-radius: 7px;
+            transition: width 0.3s ease;
+        }
+        
+        .recommendations-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .recommendations-list li {
+            background-color: #f8f9fa;
+            margin-bottom: 0.2cm;
+            padding: 0.3cm 0.5cm;
+            border-left: 3px solid #3498db;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .recommendations-list li.priority-high {
+            border-left-color: #e74c3c;
+            background-color: #fdedec;
+        }
+        
+        .recommendations-list li.overdue {
+            border-left-color: #f39c12;
+            background-color: #fef9e7;
+        }
+        
+        .exam-type {
+            font-size: 9px;
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 1cm;
+            left: 1.5cm;
+            right: 1.5cm;
+            text-align: center;
+            font-size: 8px;
+            color: #95a5a6;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 0.3cm;
+        }
+        
+        .blank-page-message {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            min-height: 5cm;
+            font-size: 14px;
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        /* Estilos para círculos de estado */
+        .circle-completed {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #000;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        
+        .circle-pending {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #dc3545;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        
+        /* Estilos para la tabla de cumplimiento */
+        #tabla-cumplimiento-nuevo table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8px;
+            border: 2px solid black;
+        }
+        
+        #tabla-cumplimiento-nuevo th, 
+        #tabla-cumplimiento-nuevo td {
+            border: 2px solid black !important;
+            padding: 2px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #tabla-cumplimiento-nuevo th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        #tabla-cumplimiento-nuevo .evaluacion-cell {
+            text-align: left;
+            padding-left: 3px;
+            font-size: 7px;
+        }
+        
+        #tabla-cumplimiento-nuevo .observaciones-cell {
+            text-align: left;
+            font-size: 6px;
+            padding: 2px;
+        }
+        
+        #tabla-cumplimiento-nuevo .age-header {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            height: 80px;
+            min-height: 80px;
+            width: 20px;
+            font-size: 7px;
+            background-color: #f0f0f0;
+            text-align: center;
+            vertical-align: middle;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding-left: 2px;
+            padding-right: 2px;
+            border: 2px solid black !important;
+        }
+        
+        #tabla-cumplimiento-nuevo .evaluacion-header {
+            writing-mode: horizontal-tb;
+            text-orientation: mixed;
+            width: 150px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            margin-top: 0;
+                print-color-adjust: exact !important;
+            }
+            
+            body { 
+                print-color-adjust: exact !important;
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            /* Páginas */
+            .page { 
+                box-shadow: none !important;
+                page-break-after: always !important;
+                margin: 0 !important;
+                background: white !important;
+                padding: 1.2cm !important;
+                min-height: auto !important;
+            }
+            
+            .page:last-child {
+                page-break-after: auto !important;
+            }
+            
+            /* NO sobrescribir colores - mantener exactamente como en HTML */
+            
+            /* Footer ajustado para impresión */
+            .footer {
+                position: static !important;
+                margin-top: 1cm !important;
+                page-break-inside: avoid !important;
+                border-top: 1px solid #ecf0f1 !important;
+            }
+            
+            /* Controlar saltos de página inteligentemente */
+            .section {
+                page-break-inside: avoid !important;
+            }
+            
+            .metric-box {
+                page-break-inside: avoid !important;
+            }
+            
+            .metrics-container {
+                page-break-inside: avoid !important;
+            }
+            
+            .recommendations-list {
+                page-break-inside: auto !important;
+            }
+            
+            .recommendations-list li {
+                page-break-inside: avoid !important;
+            }
+            
+            /* Optimizar espacios para páginas compactas */
+            .header {
+                margin-bottom: 0.8cm !important;
+                padding-bottom: 0.5cm !important;
+            }
+            
+            .section {
+                margin-bottom: 0.6cm !important;
+            }
+            
+            .section-title {
+                margin-bottom: 0.3cm !important;
+                padding: 0.25cm 0.4cm !important;
+            }
+            
+            .info-grid {
+                gap: 0.5cm !important;
+                margin-bottom: 0.3cm !important;
+            }
+            
+            .info-item {
+                margin-bottom: 0.15cm !important;
+            }
+            
+            /* NO sobrescribir tipografía - mantener colores originales del HTML */
+            
+            /* Ocultar elementos no necesarios en impresión */
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Página 1: Información del Paciente -->
+    <div class="page">
+        <div class="header">
+            <h1>INFORME DE CUMPLIMIENTO DEL PROTOCOLO</h1>
+            <h2>Atención Médica para Pacientes con Síndrome de Down</h2>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Información del Paciente</div>
+            <div class="info-grid">
+                <div>
+                    <div class="info-item">
+                        <span class="info-label">Nombre completo:</span>
+                        <span class="info-value" id="paciente-nombre">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Identificación:</span>
+                        <span class="info-value" id="paciente-identificacion">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fecha de nacimiento:</span>
+                        <span class="info-value" id="paciente-fecha-nacimiento">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Edad actual:</span>
+                        <span class="info-value" id="paciente-edad-actual">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Rango etario:</span>
+                        <span class="info-value" id="paciente-rango-etario">-</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="info-item">
+                        <span class="info-label">Acudiente:</span>
+                        <span class="info-value" id="acudiente-nombre">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Correo electrónico:</span>
+                        <span class="info-value" id="acudiente-correo">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Teléfono:</span>
+                        <span class="info-value" id="acudiente-telefono">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fecha inicio protocolo:</span>
+                        <span class="info-value" id="protocolo-fecha-inicio">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fecha de evaluación:</span>
+                        <span class="info-value" id="protocolo-fecha-evaluacion">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Métricas de Cumplimiento</div>
+            <div class="metrics-container">
+                <div class="metric-box">
+                    <div class="metric-title">Cumplimiento Puntual</div>
+                    <div class="metric-percentage" id="cumplimiento-puntual-porcentaje">-%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="cumplimiento-puntual-progreso"></div>
+                    </div>
+                    <div class="metric-details" id="cumplimiento-puntual-detalle">
+                        - de - evaluaciones del grupo etario actual
+                    </div>
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-title">Cumplimiento Global</div>
+                    <div class="metric-percentage" id="cumplimiento-global-porcentaje">-%</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="cumplimiento-global-progreso"></div>
+                    </div>
+                    <div class="metric-details" id="cumplimiento-global-detalle">
+                        - de - evaluaciones acumuladas totales
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Página 2: Cumplimiento por Edades -->
+    <div class="page">
+        <div class="section">
+            <div class="section-title">Cumplimiento por Edades</div>
+            <div class="metric-box metric-age-card">
+                <div class="metric-title">Cumplimiento por Edades</div>
+                <div class="metric-percentage" id="cumplimiento-por-edad-porcentaje">-%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="cumplimiento-por-edad-progreso"></div>
+                </div>
+                <div class="metric-details" id="cumplimiento-por-edad-detalle">
+                    - de - evaluaciones obligatorias para el grupo actual
+                </div>
+                <div class="metric-subtitle">Grupo etario actual y anteriores</div>
+                <div class="metric-age-list" id="cumplimiento-edad-historico">
+                    <div class="metric-details">
+                        Sin datos de cumplimiento por edades
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página 3: Tabla de Cumplimiento del Protocolo -->
+    <div class="page">
+        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+            <div style="background: #c8f7fa; border: 2px solid #222; padding: 10px; width: 40%; text-align: center; font-weight: bold; font-size: 13px;">
+                CUMPLIMIENTO DEL PROTOCOLO DE ATENCION MEDICA<br>
+                PARA NIÑOS, NIÑAS Y ADOLESCENTES  CON SINDROME<br>
+                DE DOWN.
+            </div>
+            <div style="background: #fff; border: 2px solid #222; padding: 10px; width: 50%; font-size: 11px; text-align: center;">
+                * Este protocolo se debe seguir en el individuo asintomático, para cumplir su objetivo preventivo. Cuando las pruebas de tamizaje (incluyendo hallazgos de la evaluación médica) sean anormales, la frecuencia de los controles y pruebas o consultas adicionales serán determinadas por el especialista
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 15px; font-size: 11px; text-align: left;">
+            <label style="font-weight: bold;">NOMBRE DEL USUARIO:</label>
+            <span id="nombre-usuario-protocolo" style="padding: 0 10px;">-</span>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: right; margin-bottom: 10px; font-size: 11px;">
+            <div style="width: 50%; text-align: left;">
+                <label style="font-weight: bold;">Fecha de inicio:</label>
+                <span id="fecha-inicio-protocolo" style="padding: 0 10px;">-</span>
+            </div>
+            <div style="width: 50%; text-align: left;">
+                <label style="font-weight: bold;">Edad Inicio del Protocolo:</label>
+                <span id="edad-inicio-protocolo" style="padding: 0 10px;">-</span>
+            </div>
+        </div>
+        
+        <div id="tabla-cumplimiento-nuevo" style="font-size: 8px;">
+            <!-- La tabla se carga aquí automáticamente -->
+        </div>
+        
+        <div style="display: flex; gap: 20px; margin-top: 10px; margin-bottom: 20px; font-size: 10px;">
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div class="circle-completed"></div>
+                <span>Evaluación realizada</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div class="circle-pending"></div>
+                <span>Evaluación pendiente</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 5px;">
+                <div style="width: 12px; height: 12px; background-color: #bdc3c7; display: inline-block;"></div>
+                <span>No aplica para esta edad</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Página 4: Recomendaciones -->
+    <div class="page">
+        <div class="header">
+            <h1>RECOMENDACIONES MÉDICAS</h1>
+            <h2>Exámenes y Evaluaciones Pendientes</h2>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Exámenes del Siguiente Grupo Etario</div>
+            <ul class="recommendations-list" id="examenes-siguiente-grupo">
+                <!-- Se llena automáticamente -->
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Exámenes Atrasados Pendientes</div>
+            <ul class="recommendations-list" id="examenes-atrasados">
+                <!-- Se llena automáticamente -->
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Exámenes Prioritarios del Grupo Actual</div>
+            <ul class="recommendations-list" id="examenes-actuales-pendientes">
+                <!-- Se llena automáticamente -->
+            </ul>
+        </div>
+    </div>
+    
+    
+    <script>
+        // Variables globales para almacenar datos
+        let registroActual = null;
+        let datosConfiguracion = null;
+        
+        // Formatear fecha
+        function formatearFecha(fecha) {
+            if (!fecha) return '-';
+            try {
+                const fechaObj = new Date(fecha);
+                return fechaObj.toLocaleDateString('es-CO', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric'
+                });
+            } catch (e) {
+                return fecha;
+            }
+        }
+        
+        // Formatear fecha y hora
+        function formatearFechaHora(fecha) {
+            if (!fecha) return '-';
+            try {
+                const fechaObj = new Date(fecha);
+                return fechaObj.toLocaleDateString('es-CO', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            } catch (e) {
+                return fecha;
+            }
+        }
+        
+        // Cargar datos del registro actual
+        async function cargarDatosRegistro() {
+            console.log('Cargando datos del registro actual...');
+            
+            try {
+                // Intentar obtener datos desde sessionStorage primero
+                let datosCompletos = null;
+                try {
+                    datosCompletos = JSON.parse(sessionStorage.getItem('datosInforme'));
+                } catch (e) {
+                    console.log('No hay datos en sessionStorage');
+                }
+                
+                if (datosCompletos) {
+                    console.log('Datos encontrados en sessionStorage:', datosCompletos);
+                    registroActual = datosCompletos;
+                    await cargarConfiguracion();
+                    poblarInforme();
+                    return;
+                }
+                
+                // Fallback: cargar desde archivo
+                let nombreArchivo = sessionStorage.getItem('registroArchivo') || 
+                                   sessionStorage.getItem('archivoRegistroInforme');
+                
+                // Si no hay archivo específico, obtener uno disponible
+                if (!nombreArchivo) {
+                    try {
+                        // Preparar parámetros de búsqueda desde sessionStorage
+                        const parametrosBusqueda = {};
+                        
+                        // Intentar obtener identificación del paciente desde sessionStorage
+                        try {
+                            const registroIdentificacion = JSON.parse(sessionStorage.getItem('registroIdentificacion'));
+                            if (registroIdentificacion?.paciente?.identificacion?.numero) {
+                                parametrosBusqueda.identificacion = registroIdentificacion.paciente.identificacion.numero;
+                                console.log('Buscando registro por identificación:', parametrosBusqueda.identificacion);
+                            }
+                        } catch (e) {
+                            console.log('No se pudo obtener identificación desde registroIdentificacion');
+                        }
+                        
+                        // Intentar obtener desde datos completos del informe
+                        if (!parametrosBusqueda.identificacion) {
+                            try {
+                                const datosInforme = JSON.parse(sessionStorage.getItem('datosInforme'));
+                                if (datosInforme?.paciente?.identificacion?.numero) {
+                                    parametrosBusqueda.identificacion = datosInforme.paciente.identificacion.numero;
+                                    console.log('Buscando registro por identificación desde datosInforme:', parametrosBusqueda.identificacion);
+                                }
+                            } catch (e) {
+                                console.log('No se pudo obtener identificación desde datosInforme');
+                            }
+                        }
+                        
+                        // Llamar a la función con parámetros si los hay, o sin parámetros como fallback
+                        const parametros = Object.keys(parametrosBusqueda).length > 0 ? parametrosBusqueda : null;
+                        nombreArchivo = await window.api.obtenerRegistroDisponible(parametros);
+                        
+                        if (parametros) {
+                            console.log('Registro encontrado por parámetros:', nombreArchivo);
+                        } else {
+                            console.log('Usando registro más reciente disponible:', nombreArchivo);
+                        }
+                    } catch (error) {
+                        console.error('No se encontraron registros disponibles:', error);
+                        mostrarError('No hay registros disponibles. Debe crear al menos un registro antes de generar un informe.');
+                        return;
+                    }
+                }
+                
+                console.log('Cargando desde archivo:', nombreArchivo);
+                
+                if (window.api && window.api.leerRegistroJSON) {
+                    const datos = await window.api.leerRegistroJSON(nombreArchivo);
+                    registroActual = datos;
+                    await cargarConfiguracion();
+                    poblarInforme();
+                } else {
+                    console.error('API de Electron no disponible');
+                    mostrarError('No se pueden cargar los datos del registro');
+                }
+                
+            } catch (error) {
+                console.error('Error cargando datos del registro:', error);
+                mostrarError('Error al cargar los datos del registro: ' + error.message);
+            }
+        }
+        
+        // Cargar configuración desde variables.json
+        async function cargarConfiguracion() {
+            try {
+                if (window.api && window.api.leerVariablesJSON) {
+                    datosConfiguracion = await window.api.leerVariablesJSON();
+                    window.datosConfiguracion = datosConfiguracion; // Hacer global para la función de la tabla
+                    console.log('Configuración cargada:', datosConfiguracion);
+                } else {
+                    console.warn('API de configuración no disponible');
+                }
+            } catch (error) {
+                console.error('Error cargando configuración:', error);
+            }
+        }
+        
+        // Mostrar error en el informe
+        function mostrarError(mensaje) {
+            document.querySelector('.page').innerHTML = `
+                <div style="text-align: center; color: #e74c3c; margin-top: 5cm;">
+                    <h2>Error al generar informe</h2>
+                    <p>${mensaje}</p>
+                    <p style="margin-top: 1cm; font-size: 10px; color: #95a5a6;">
+                        Verifique que se haya guardado el registro correctamente antes de generar el informe.
+                    </p>
+                </div>
+            `;
+        }
+        
+        // Poblar todo el informe con datos reales
+        function poblarInforme() {
+            if (!registroActual) {
+                mostrarError('No se encontraron datos del registro');
+                return;
+            }
+            
+            console.log('Poblando informe con datos:', registroActual);
+            
+            poblarMetadata();
+            poblarInformacionPaciente();
+            poblarMetricasCumplimiento();
+            poblarRecomendaciones();
+            poblarDatosPagina2();
+            cargarTablaCumplimiento();
+        }
+        
+        // Poblar metadata de las páginas
+        function poblarMetadata() {
+            const fechaGeneracion = formatearFechaHora(new Date());
+            const codigoRegistro = registroActual.codigoRegistro || 
+                                 registroActual.paciente?.identificacion?.numero || 
+                                 'Sin código';
+            
+        }
+        
+        // Poblar información del paciente
+        function poblarInformacionPaciente() {
+            const paciente = registroActual.paciente || {};
+            const acudiente = registroActual.acudiente || {};
+            const protocolo = registroActual.protocolo || {};
+            const rangoEtario = registroActual.rangoEtario || {};
+            
+            // Información del paciente
+            document.getElementById('paciente-nombre').textContent = 
+                paciente.nombreCompleto || '-';
+            
+            document.getElementById('paciente-identificacion').textContent = 
+                paciente.identificacion?.numeroFormateado || paciente.identificacion?.numero || '-';
+            
+            document.getElementById('paciente-fecha-nacimiento').textContent = 
+                formatearFecha(paciente.fechaNacimiento);
+            
+            // Edad actual
+            const edadActual = paciente.edadActual;
+            if (edadActual) {
+                const edadTexto = `${edadActual.años || 0} años, ${edadActual.meses || 0} meses`;
+                document.getElementById('paciente-edad-actual').textContent = edadTexto;
+            } else {
+                document.getElementById('paciente-edad-actual').textContent = '-';
+            }
+            
+            document.getElementById('paciente-rango-etario').textContent = 
+                rangoEtario.etiqueta || '-';
+            
+            // Información del acudiente
+            document.getElementById('acudiente-nombre').textContent = 
+                acudiente.nombreCompleto || '-';
+            
+            document.getElementById('acudiente-correo').textContent = 
+                acudiente.correoElectronico || '-';
+            
+            document.getElementById('acudiente-telefono').textContent = 
+                acudiente.telefono || '-';
+            
+            // Información del protocolo
+            document.getElementById('protocolo-fecha-inicio').textContent = 
+                formatearFecha(protocolo.fechaInicio);
+            
+            document.getElementById('protocolo-fecha-evaluacion').textContent = 
+                formatearFecha(protocolo.fechaDiligenciamiento || new Date());
+        }
+        
+        // Poblar métricas de cumplimiento
+        function poblarMetricasCumplimiento() {
+            const cumplimiento = registroActual.cumplimiento || {};
+            const puntual = cumplimiento.puntual || {};
+            const global = cumplimiento.global || {};
+            const evaluacionesEstado = registroActual.evaluaciones?.estadoActual || {};
+            const rangoEtario = registroActual.rangoEtario || {};
+            const escalaEdad = (registroActual.datosSeguimiento?.escala_edad) ||
+                               (datosConfiguracion?.escala_edad) || [];
+            const codigoActual = rangoEtario.codigo !== undefined ? Number(rangoEtario.codigo) : null;
+
+            // Cumplimiento puntual (tarjeta original)
+            const porcentajePuntual = Math.max(0, Math.min(100, Number(puntual.porcentaje) || 0));
+            const realizadasPuntual = puntual.evaluacionesRealizadas || 0;
+            const totalPuntual = puntual.evaluacionesIndicadas || 0;
+
+            document.getElementById('cumplimiento-puntual-porcentaje').textContent =
+                `${porcentajePuntual}%`;
+            document.getElementById('cumplimiento-puntual-progreso').style.width =
+                `${porcentajePuntual}%`;
+            document.getElementById('cumplimiento-puntual-detalle').textContent =
+                `${realizadasPuntual} de ${totalPuntual} evaluaciones del grupo etario actual`;
+
+            // Cumplimiento global
+            const porcentajeGlobal = Math.max(0, Math.min(100, Number(global.porcentaje) || 0));
+            document.getElementById('cumplimiento-global-porcentaje').textContent =
+                `${porcentajeGlobal}%`;
+            document.getElementById('cumplimiento-global-progreso').style.width =
+                `${porcentajeGlobal}%`;
+            document.getElementById('cumplimiento-global-detalle').textContent =
+                `${global.totalRealizadas || 0} de ${global.totalObligatorias || 0} evaluaciones acumuladas totales`;
+
+            // Cumplimiento por edades (nueva tarjeta)
+            let cumplimientoPorEdad = calcularCumplimientoPorEdades(
+                escalaEdad,
+                evaluacionesEstado,
+                codigoActual
+            );
+
+            const actualMetric = cumplimientoPorEdad.find(item => item.esActual) || {
+                porcentaje: puntual.porcentaje || 0,
+                realizadas: puntual.evaluacionesRealizadas || 0,
+                total: puntual.evaluacionesIndicadas || 0,
+                etiqueta: rangoEtario.etiqueta || 'Grupo actual',
+                codigo: codigoActual || 0,
+                esActual: true
+            };
+
+            if (!cumplimientoPorEdad.length) {
+                cumplimientoPorEdad = [actualMetric];
+            }
+
+            const porcentajeEdad = Math.max(0, Math.min(100, Number(actualMetric.porcentaje) || 0));
+            const realizadasEdad = actualMetric.realizadas || 0;
+            const totalEdad = actualMetric.total || 0;
+            const etiquetaEdad = actualMetric.etiqueta || 'Grupo actual';
+
+            document.getElementById('cumplimiento-por-edad-porcentaje').textContent =
+                `${porcentajeEdad}%`;
+            document.getElementById('cumplimiento-por-edad-progreso').style.width =
+                `${porcentajeEdad}%`;
+            document.getElementById('cumplimiento-por-edad-detalle').textContent =
+                `${realizadasEdad} de ${totalEdad} evaluaciones obligatorias para ${etiquetaEdad}`;
+
+            poblarCumplimientoHistorico(cumplimientoPorEdad);
+        }
+
+        function calcularCumplimientoPorEdades(escalaEdad, evaluaciones, codigoActual) {
+            if (!Array.isArray(escalaEdad) || !escalaEdad.length || codigoActual === null || codigoActual === undefined) {
+                return [];
+            }
+
+            const codigoActualNumero = Number(codigoActual);
+            const gruposOrdenados = [...escalaEdad].sort((a, b) => Number(a.codigo) - Number(b.codigo));
+
+            return gruposOrdenados
+                .filter(grupo => Number(grupo.codigo) <= codigoActualNumero)
+                .map(grupo => {
+                    const obligatorias = grupo.evaluacion_obligatoria || [];
+                    const total = obligatorias.length;
+                    const realizadas = obligatorias.filter(evalKey => evaluaciones[evalKey] === 2).length;
+                    const porcentaje = total > 0 ? Math.round((realizadas / total) * 100) : 0;
+
+                    return {
+                        codigo: Number(grupo.codigo) || 0,
+                        etiqueta: grupo.etiqueta || 'Grupo',
+                        total,
+                        realizadas,
+                        porcentaje: Math.max(0, Math.min(100, porcentaje)),
+                        esActual: Number(grupo.codigo) === codigoActualNumero
+                    };
+                });
+        }
+
+        function poblarCumplimientoHistorico(cumplimientoPorEdad) {
+            const contenedor = document.getElementById('cumplimiento-edad-historico');
+            if (!contenedor) {
+                return;
+            }
+
+            const listado = (cumplimientoPorEdad || []).filter(item => item && item.total !== undefined);
+
+            if (!listado.length) {
+                contenedor.innerHTML = '<div class="metric-details">Sin datos de cumplimiento por edades</div>';
+                return;
+            }
+
+            const itemsOrdenados = listado.sort((a, b) => (Number(b.codigo) || 0) - (Number(a.codigo) || 0));
+            contenedor.innerHTML = itemsOrdenados.map(item => {
+                const etiqueta = item.esActual ? `${item.etiqueta} (Actual)` : item.etiqueta;
+                const porcentaje = Math.max(0, Math.min(100, Number(item.porcentaje) || 0));
+                const realizadas = item.realizadas || 0;
+                const total = item.total || 0;
+
+                return `
+                    <div class="metric-age-item ${item.esActual ? 'metric-age-item-current' : ''}">
+                        <div class="metric-age-header">
+                            <span class="metric-age-label">${etiqueta}</span>
+                            <span class="metric-age-percent">${porcentaje}%</span>
+                        </div>
+                        <div class="progress-bar progress-bar-small">
+                            <div class="progress-fill" style="width: ${porcentaje}%"></div>
+                        </div>
+                        <div class="metric-details">${realizadas} de ${total} evaluaciones obligatorias</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Poblar recomendaciones (lógica simplificada)
+        function poblarRecomendaciones() {
+            const evaluaciones = registroActual.evaluaciones?.estadoActual || {};
+            const rangoEtario = registroActual.rangoEtario || {};
+            const datosSeguimiento = registroActual.datosSeguimiento || datosConfiguracion;
+            const nombresEvaluaciones = registroActual.nombresEvaluaciones || datosConfiguracion?.nombresEvaluaciones || {};
+            
+            console.log('Poblando recomendaciones simplificadas con:', {evaluaciones, rangoEtario, datosSeguimiento});
+            
+            // 1. Exámenes pendientes del grupo etario actual
+            const examenesActualesPendientes = obtenerExamenesActualesPendientes(evaluaciones, rangoEtario, nombresEvaluaciones);
+            poblarListaExamenes('examenes-actuales-pendientes', examenesActualesPendientes, 'priority-high');
+            
+            // 2. Exámenes atrasados (usar datos del seguimiento si están disponibles)
+            const examenesAtrasados = obtenerExamenesAtrasadosSimplificado(evaluaciones, rangoEtario, datosSeguimiento, nombresEvaluaciones);
+            poblarListaExamenes('examenes-atrasados', examenesAtrasados, 'overdue');
+            
+            // 3. Exámenes del siguiente grupo etario
+            const siguienteGrupo = determinarSiguienteGrupoEtario(rangoEtario);
+            const examenesSiguienteGrupo = obtenerExamenesSiguienteGrupoSimplificado(siguienteGrupo, evaluaciones, nombresEvaluaciones);
+            poblarListaExamenes('examenes-siguiente-grupo', examenesSiguienteGrupo, 'next');
+        }
+        
+        // Determinar siguiente grupo etario
+        function determinarSiguienteGrupoEtario(rangoActual) {
+            if (!datosConfiguracion || !datosConfiguracion.escala_edad) {
+                return null;
+            }
+            
+            const codigoActual = rangoActual.codigo;
+            const indiceActual = datosConfiguracion.escala_edad.findIndex(r => r.codigo === codigoActual);
+            
+            if (indiceActual >= 0 && indiceActual < datosConfiguracion.escala_edad.length - 1) {
+                return datosConfiguracion.escala_edad[indiceActual + 1];
+            }
+            
+            return null;
+        }
+        
+        // Obtener exámenes del siguiente grupo etario (simplificado)
+        function obtenerExamenesSiguienteGrupoSimplificado(siguienteGrupo, evaluaciones, nombresEvaluaciones) {
+            if (!siguienteGrupo) {
+                return [{
+                    nombre: 'El paciente se encuentra en el último grupo etario del protocolo',
+                    tipo: 'info'
+                }];
+            }
+            
+            console.log('Calculando exámenes para siguiente grupo:', siguienteGrupo);
+            
+            const examenes = [];
+            
+            // Exámenes obligatorios del siguiente grupo (solo los no realizados)
+            if (siguienteGrupo.evaluacion_obligatoria) {
+                siguienteGrupo.evaluacion_obligatoria.forEach(codigo => {
+                    const estadoExamen = evaluaciones[codigo];
+                    if (estadoExamen !== 2) { // No realizados (0 o 1)
+                        examenes.push({
+                            nombre: nombresEvaluaciones[codigo] || codigo,
+                            tipo: 'obligatorio',
+                            prioridad: 1
+                        });
+                    }
+                });
+            }
+            
+            // Algunos exámenes opcionales importantes (solo los no realizados, máximo 3)
+            if (siguienteGrupo.evaluacion_opcional) {
+                let opcionalesAgregados = 0;
+                siguienteGrupo.evaluacion_opcional.forEach(codigo => {
+                    if (opcionalesAgregados < 3) {
+                        const estadoExamen = evaluaciones[codigo];
+                        if (estadoExamen !== 2) { // No realizados (0 o 1)
+                            examenes.push({
+                                nombre: nombresEvaluaciones[codigo] || codigo,
+                                tipo: 'opcional',
+                                prioridad: 2
+                            });
+                            opcionalesAgregados++;
+                        }
+                    }
+                });
+            }
+            
+            // Ordenar por prioridad (obligatorios primero)
+            examenes.sort((a, b) => a.prioridad - b.prioridad);
+            
+            if (examenes.length === 0) {
+                return [{
+                    nombre: `✅ Todos los exámenes recomendados para ${siguienteGrupo.etiqueta} ya están realizados`,
+                    tipo: 'success'
+                }];
+            }
+            
+            console.log('Exámenes del siguiente grupo calculados:', examenes);
+            return examenes;
+        }
+        
+        // Obtener exámenes atrasados (lógica simplificada usando datos del seguimiento)
+        function obtenerExamenesAtrasadosSimplificado(evaluaciones, rangoActual, datosSeguimiento, nombresEvaluaciones) {
+            console.log('Calculando exámenes atrasados simplificado');
+            
+            const atrasados = [];
+            
+            // Si hay datos de seguimiento con exámenes atrasados calculados, usarlos
+            if (datosSeguimiento && datosSeguimiento.examenes_atrasados) {
+                datosSeguimiento.examenes_atrasados.forEach(examenAtrasado => {
+                    const estadoExamen = evaluaciones[examenAtrasado.key];
+                    // Solo incluir si no se ha realizado (estado !== 2)
+                    if (estadoExamen !== 2) {
+                        atrasados.push({
+                            nombre: nombresEvaluaciones[examenAtrasado.key] || examenAtrasado.key,
+                            tipo: 'atrasado',
+                            grupoOriginal: examenAtrasado.etiquetaEdad || 'Rango anterior',
+                            estadoActual: estadoExamen
+                        });
+                    }
+                });
+            } else {
+                // Fallback: buscar exámenes obligatorios de rangos anteriores no realizados
+                if (datosConfiguracion && datosConfiguracion.escala_edad) {
+                    const codigoEtarioActual = rangoActual.codigo;
+                    
+                    datosConfiguracion.escala_edad.forEach(grupo => {
+                        if (grupo.codigo < codigoEtarioActual && grupo.evaluacion_obligatoria) {
+                            grupo.evaluacion_obligatoria.forEach(codigo => {
+                                const estadoExamen = evaluaciones[codigo];
+                                // Incluir si no se ha realizado (0 o 1) y no está en la lista de no indicados
+                                if (estadoExamen !== 2 && !rangoActual.evaluacion_no_indicada?.includes(codigo)) {
+                                    atrasados.push({
+                                        nombre: nombresEvaluaciones[codigo] || codigo,
+                                        tipo: 'atrasado',
+                                        grupoOriginal: grupo.etiqueta,
+                                        estadoActual: estadoExamen
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+            
+            console.log('Exámenes atrasados calculados:', atrasados);
+            
+            return atrasados.length > 0 ? atrasados : [{
+                nombre: '✅ No se identificaron exámenes atrasados pendientes',
+                tipo: 'success'
+            }];
+        }
+        
+        // Obtener exámenes actuales pendientes (simplificado)
+        function obtenerExamenesActualesPendientes(evaluaciones, rangoActual, nombresEvaluaciones) {
+            console.log('Calculando exámenes actuales pendientes para rango:', rangoActual);
+            
+            const pendientes = [];
+            
+            // Exámenes obligatorios del grupo actual que no estén realizados (incluye no disponibles)
+            if (rangoActual.evaluacion_obligatoria) {
+                rangoActual.evaluacion_obligatoria.forEach(codigo => {
+                    const estadoExamen = evaluaciones[codigo];
+                    if (estadoExamen !== 2) { // No realizados (0) y no disponibles (1)
+                        pendientes.push({
+                            nombre: nombresEvaluaciones[codigo] || codigo,
+                            tipo: 'pendiente-obligatorio',
+                            estadoActual: estadoExamen
+                        });
+                    }
+                });
+            }
+            
+            console.log('Exámenes actuales pendientes calculados:', pendientes);
+            
+            if (pendientes.length === 0) {
+                return [{
+                    nombre: '✅ Todas las evaluaciones obligatorias del grupo etario actual están completadas',
+                    tipo: 'success'
+                }];
+            }
+            
+            return pendientes;
+        }
+        
+        // Poblar lista de exámenes (lógica mejorada)
+        function poblarListaExamenes(elementoId, examenes, claseCSS) {
+            const elemento = document.getElementById(elementoId);
+            
+            if (examenes.length === 0) {
+                elemento.innerHTML = '<li>No hay exámenes para mostrar</li>';
+                return;
+            }
+            
+            elemento.innerHTML = examenes.map(examen => {
+                let claseItem = claseCSS;
+                let texto = examen.nombre;
+                
+                // Determinar clase CSS y texto adicional según el tipo
+                switch (examen.tipo) {
+                    case 'obligatorio':
+                        texto += ' <span class="exam-type">(Obligatorio)</span>';
+                        break;
+                    case 'opcional':
+                        texto += ' <span class="exam-type">(Opcional)</span>';
+                        break;
+                    case 'pendiente-obligatorio':
+                        texto += ' <span class="exam-type">(Obligatorio pendiente)</span>';
+                        claseItem = 'priority-high';
+                        break;
+                    case 'pendiente-opcional':
+                        texto += ' <span class="exam-type">(Opcional - considerar)</span>';
+                        break;
+                    case 'atrasado':
+                        if (examen.grupoOriginal) {
+                            texto += ` <span class="exam-type">(Pendiente desde: ${examen.grupoOriginal})</span>`;
+                        }
+                        claseItem = 'overdue';
+                        break;
+                    case 'success':
+                        claseItem = '';
+                        break;
+                    case 'error':
+                        claseItem = 'priority-high';
+                        break;
+                    case 'info':
+                        claseItem = '';
+                        break;
+                }
+                
+                return `<li class="${claseItem}">${texto}</li>`;
+            }).join('');
+        }
+        
+        
+        // Cargar y poblar tabla de cumplimiento con círculos de estado
+        async function cargarTablaCumplimiento() {
+            try {
+                if (!window.api || !window.api.leerArchivoHTML) {
+                    throw new Error('API de Electron no disponible para leer archivos HTML');
+                }
+                
+                const html = await window.api.leerArchivoHTML('tabla_cumplimiento.html');
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const tabla = tempDiv.querySelector('table');
+                
+                if (tabla) {
+                    document.getElementById('tabla-cumplimiento-nuevo').appendChild(tabla);
+                    // Llamar al módulo para poblar con círculos de estado
+                    populateTableWithStatusCirclesNuevo();
+                } else {
+                    document.getElementById('tabla-cumplimiento-nuevo').innerHTML = '<p>No se pudo cargar la tabla de cumplimiento.</p>';
+                }
+            } catch (error) {
+                console.error('Error cargando tabla de cumplimiento:', error);
+                document.getElementById('tabla-cumplimiento-nuevo').innerHTML = '<p>Error al cargar la tabla de cumplimiento: ' + error.message + '</p>';
+            }
+        }
+        
+        // Módulo para poblar tabla con círculos de estado (versión para nuevo informe)
+        function populateTableWithStatusCirclesNuevo() {
+            // Esperar a que se carguen los datos del registro
+            if (!registroActual) {
+                console.log('Esperando datos del registro...');
+                setTimeout(populateTableWithStatusCirclesNuevo, 500);
+                return;
+            }
+
+            const evaluaciones = registroActual.evaluaciones?.estadoActual || {};
+            const tabla = document.querySelector('#tabla-cumplimiento-nuevo table');
+
+            if (!tabla) {
+                console.error('No se encontró la tabla de cumplimiento');
+                return;
+            }
+
+            // Determinar la columna máxima según la edad del paciente
+            let rangoEtario = registroActual.rangoEtario || {};
+            let codigoEdadActual = rangoEtario.codigo;
+            // Buscar el índice de columna que corresponde a la edad actual
+            // Asume que las columnas de edad tienen el atributo 'data-codigo-edad' o el orden corresponde a escala_edad
+            let maxColIndex = null;
+            if (window.datosConfiguracion && window.datosConfiguracion.escala_edad) {
+                const escalaEdad = window.datosConfiguracion.escala_edad;
+                maxColIndex = escalaEdad.findIndex(r => r.codigo === codigoEdadActual);
+                // Si no se encuentra, usar el último
+                if (maxColIndex === -1) maxColIndex = escalaEdad.length - 1;
+            } else {
+                // Fallback: usar todas las columnas
+                maxColIndex = null;
+            }
+
+            // Mapeo de evaluaciones a filas (basado en la estructura de tabla_cumplimiento.html)
+            const evaluacionToRowMap = {
+                'cariotipo': 0,
+                'consultoria_genetica': 1,
+                'tsh_neonatal': 2,
+                'hemograma_frotis': 3,
+                'tsh_t4_libre': 4,
+                'valoracion_endocrinologia': 5,
+                'ecocardiograma': 6,
+                'potenciales_evocados_auditivos': 7,
+                'audiometria_impedanciometria': 8,
+                'control_otorrino': 9,
+                'polisomnograma': 10,
+                'rayosx_cadera': 11,
+                'radiografia_dinamica_cervical': 12,
+                'tamizaje_celiaca': 13,
+                'vacunas_pai': 14,
+                'vacunas_no_pai': 15,
+                'valoracion_oftalmologica': 16,
+                'valoracion_odontologica': 17,
+                'valoracion_pediatrica': 18,
+                'valoracion_neuropediatria': 19,
+                'cumplimiento_protocolo': 20
+            };
+
+            // Obtener todas las filas del tbody
+            const tbody = tabla.querySelector('tbody');
+            if (!tbody) {
+                console.error('No se encontró tbody en la tabla');
+                return;
+            }
+
+            const rows = tbody.querySelectorAll('tr');
+
+            // Iterar sobre las evaluaciones y actualizar las celdas correspondientes
+            Object.entries(evaluaciones).forEach(([evaluacionKey, estado]) => {
+                const rowIndex = evaluacionToRowMap[evaluacionKey];
+
+                if (rowIndex !== undefined && rowIndex < rows.length) {
+                    const row = rows[rowIndex];
+                    const cells = row.querySelectorAll('td');
+
+                    // Reemplazar contenido de las celdas (excluyendo primera y última columna)
+                    // Solo hasta la columna de la edad del paciente
+                    let lastCol = (maxColIndex !== null) ? (1 + maxColIndex) : (cells.length - 2);
+                    for (let i = 1; i <= lastCol && i < cells.length - 1; i++) {
+                        const cell = cells[i];
+
+                        // Solo modificar celdas que no sean sombreadas y que tengan contenido marcado
+                        if (!cell.classList.contains('checkbox-cell-shaded')) {
+                            if (cell.classList.contains('checkbox-cell-marked') || cell.textContent.trim() === 'X') {
+                                // Evaluar el estado: 2 = realizado (círculo negro), otro = pendiente (círculo rojo)
+                                if (estado === 2) {
+                                    cell.innerHTML = '<div class="circle-completed"></div>';
+                                    cell.className = 'checkbox-cell';
+                                } else {
+                                    cell.innerHTML = '<div class="circle-pending"></div>';
+                                    cell.className = 'checkbox-cell';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            console.log('Tabla poblada con círculos de estado hasta la edad del paciente');
+        }
+        
+        // Inicialización al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarDatosRegistro();
+        });
+        
+        // Poblar datos en página 2 (encabezado de la tabla)
+function poblarDatosPagina2() {
+    const protocolo = registroActual.protocolo || {};
+    const paciente = registroActual.paciente || {};
+    
+    // Fecha de inicio
+    const fechaInicio = protocolo.fechaInicio ? formatearFecha(protocolo.fechaInicio) : '-';
+    const fechaInicioElem = document.getElementById('fecha-inicio-protocolo');
+    if (fechaInicioElem) fechaInicioElem.textContent = fechaInicio;
+
+    // Edad inicio del protocolo - calculada como: Edad actual en meses - meses desde fecha de inicio
+    let edadInicio = '-';
+    if (protocolo.fechaInicio && paciente.edadActual) {
+        try {
+            // Calcular edad actual total en meses
+            const edadActualMeses = (paciente.edadActual.años || 0) * 12 + (paciente.edadActual.meses || 0);
+            
+            // Calcular meses transcurridos desde la fecha de inicio del protocolo
+            const fechaInicioObj = new Date(protocolo.fechaInicio);
+            const fechaActual = new Date();
+            
+            const añosTranscurridos = fechaActual.getFullYear() - fechaInicioObj.getFullYear();
+            let mesesTranscurridos = fechaActual.getMonth() - fechaInicioObj.getMonth();
+            mesesTranscurridos += añosTranscurridos * 12;
+            
+            // Ajuste si el día actual es menor al día de inicio
+            if (fechaActual.getDate() < fechaInicioObj.getDate()) {
+                mesesTranscurridos--;
+            }
+            
+            // Calcular edad de inicio del protocolo en meses
+            const edadInicioMeses = edadActualMeses - mesesTranscurridos;
+            
+            if (edadInicioMeses >= 0) {
+                const años = Math.floor(edadInicioMeses / 12);
+                const meses = edadInicioMeses % 12;
+                edadInicio = `${años} años, ${meses} meses`;
+            } else {
+                edadInicio = '0 años, 0 meses';
+            }
+        } catch (error) {
+            console.error('Error calculando edad de inicio:', error);
+            edadInicio = '-';
+        }
+    } else if (protocolo.edadInicio && (protocolo.edadInicio.años !== undefined || protocolo.edadInicio.meses !== undefined)) {
+        // Fallback al valor guardado si existe
+        edadInicio = `${protocolo.edadInicio.años || 0} años, ${protocolo.edadInicio.meses || 0} meses`;
+    } else if (registroActual.paciente && registroActual.paciente.edadInicioProtocolo) {
+        // Otro fallback
+        const edadObj = registroActual.paciente.edadInicioProtocolo;
+        edadInicio = `${edadObj.años || 0} años, ${edadObj.meses || 0} meses`;
+    }
+    const edadInicioElem = document.getElementById('edad-inicio-protocolo');
+    if (edadInicioElem) edadInicioElem.textContent = edadInicio;
+
+    // Nombre del usuario
+    const nombreUsuario = paciente.nombreCompleto || '-';
+    const nombreUsuarioElem = document.getElementById('nombre-usuario-protocolo');
+    if (nombreUsuarioElem) nombreUsuarioElem.textContent = nombreUsuario;
+}
+    </script>
+</body>
+</html>

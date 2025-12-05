@@ -1,0 +1,620 @@
+{
+  "unidades": "meses (código de límite superior)",
+  "escala_edad": [
+    {
+      "etiqueta": "RN",
+      "codigo": 1,
+      "evaluacion_obligatoria": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "hemograma_frotis",
+        "ecocardiograma"
+      ],
+      "evaluacion_opcional": [
+        "control_otorrino",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "tsh_t4_libre",
+        "valoracion_endocrinologia",
+        "potenciales_evocados_auditivos",
+        "audiometria_impedanciometria",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical",
+        "valoracion_odontologica"
+      ]
+    },
+    {
+      "etiqueta": "1 a 6 meses",
+      "codigo": 6,
+      "evaluacion_obligatoria": [
+        "tsh_t4_libre",
+        "ecocardiograma",
+        "rayosx_cadera",
+        "valoracion_oftalmologica"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "control_otorrino",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "hemograma_frotis",
+        "potenciales_evocados_auditivos",
+        "audiometria_impedanciometria",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "7 a 12 meses",
+      "codigo": 12,
+      "evaluacion_obligatoria": [
+        "tsh_t4_libre",
+        "ecocardiograma",
+        "potenciales_evocados_auditivos"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "control_otorrino",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "hemograma_frotis",
+        "audiometria_impedanciometria",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "1 año y medio",
+      "codigo": 18,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "potenciales_evocados_auditivos",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "hemograma_frotis",
+        "ecocardiograma",
+        "audiometria_impedanciometria",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Dos años",
+      "codigo": 24,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino",
+        "radiografia_dinamica_cervical"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "potenciales_evocados_auditivos",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "audiometria_impedanciometria",
+        "rayosx_cadera"
+      ]
+    },
+    {
+      "etiqueta": "Tres años",
+      "codigo": 36,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "potenciales_evocados_auditivos",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "audiometria_impedanciometria",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Cuatro años",
+      "codigo": 48,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "potenciales_evocados_auditivos",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Cinco años",
+      "codigo": 60,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino",
+        "rayosx_cadera"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Seis años",
+      "codigo": 72,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Siete años",
+      "codigo": 84,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Ocho años",
+      "codigo": 96,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Nueve años",
+      "codigo": 108,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "Diez años",
+      "codigo": 120,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "rayosx_cadera",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "De once a trece años",
+      "codigo": 156,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "rayosx_cadera",
+        "radiografia_dinamica_cervical"
+      ]
+    },
+    {
+      "etiqueta": "De catorce a dieciocho años",
+      "codigo": 216,
+      "evaluacion_obligatoria": [
+        "ecocardiograma",
+        "tsh_t4_libre",
+        "potenciales_evocados_auditivos",
+        "control_otorrino",
+        "rayosx_cadera"
+      ],
+      "evaluacion_opcional": [
+        "valoracion_endocrinologia",
+        "audiometria_impedanciometria",
+        "polisomnograma",
+        "tamizaje_celiaca",
+        "vacunas_pai",
+        "vacunas_no_pai",
+        "valoracion_oftalmologica",
+        "valoracion_odontologica",
+        "valoracion_pediatrica",
+        "valoracion_neuropediatria"
+      ],
+      "evaluacion_no_indicada": [
+        "cariotipo",
+        "consultoria_genetica",
+        "tsh_neonatal",
+        "potenciales_evocados_auditivos",
+        "radiografia_dinamica_cervical"
+      ]
+    }
+  ],
+  "intervenciones": {
+    "cariotipo": {
+      "intervencion": 1,
+      "edad_obligatoria": [1],
+      "edad_opcional": [],
+      "edad_no_indicada": [6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "observaciones": []
+    },
+    "consultoria_genetica": {
+      "intervencion": 2,
+      "edad_obligatoria": [1],
+      "edad_opcional": [],
+      "edad_no_indicada": [6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "observaciones": []
+    },
+    "tsh_neonatal": {
+      "intervencion": 3,
+      "edad_obligatoria": [1],
+      "edad_opcional": [],
+      "edad_no_indicada": [6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "observaciones": []
+    },
+    "hemograma_frotis": {
+      "intervencion": 4,
+      "edad_obligatoria": [1,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_opcional": [],
+      "edad_no_indicada": [6,12],
+      "observaciones": []
+    },
+    "tsh_t4_libre": {
+      "intervencion": 5,
+      "edad_obligatoria": [6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_opcional": [],
+      "edad_no_indicada": [1],
+      "observaciones": []
+    },
+    "valoracion_endocrinologia": {
+      "intervencion": 6,
+      "edad_obligatoria": [],
+      "edad_opcional": [6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [1],
+      "observaciones": []
+    },
+    "ecocardiograma": {
+      "intervencion": 7,
+      "edad_obligatoria": [1,6,12,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_opcional": [],
+      "edad_no_indicada": [18],
+      "observaciones": []
+    },
+    "potenciales_evocados_auditivos": {
+      "intervencion": 8,
+      "edad_obligatoria": [12],
+      "edad_opcional": [18,24,36,48],
+      "edad_no_indicada": [1,6,60,72,96,84,108,120,156,216],
+      "observaciones": []
+    },
+    "audiometria_impedanciometria": {
+      "intervencion": 9,
+      "edad_obligatoria": [48],
+      "edad_opcional": [60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [1,6,12,18,24,36],
+      "observaciones": []
+    },
+    "control_otorrino": {
+      "intervencion": 10,
+      "edad_obligatoria": [18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_opcional": [1,6,12],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "polisomnograma": {
+      "intervencion": 11,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "rayosx_cadera": {
+      "intervencion": 12,
+      "edad_obligatoria": [6,60,216],
+      "edad_opcional": [],
+      "edad_no_indicada": [1,12,18,24,36,48,72,96,84,108,120,156],
+      "observaciones": []
+    },
+    "radiografia_dinamica_cervical": {
+      "intervencion": 13,
+      "edad_obligatoria": [24],
+      "edad_opcional": [],
+      "edad_no_indicada": [1,6,12,18,36,48,60,72,96,84,108,120,156,216],
+      "observaciones": []
+    },
+    "tamizaje_celiaca": {
+      "intervencion": 14,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "vacunas_pai": {
+      "intervencion": 15,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "vacunas_no_pai": {
+      "intervencion": 16,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "valoracion_oftalmologica": {
+      "intervencion": 17,
+      "edad_obligatoria": [6],
+      "edad_opcional": [12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [1],
+      "observaciones": []
+    },
+    "valoracion_odontologica": {
+      "intervencion": 18,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "valoracion_pediatrica": {
+      "intervencion": 19,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    },
+    "valoracion_neuropediatria": {
+      "intervencion": 20,
+      "edad_obligatoria": [],
+      "edad_opcional": [1,6,12,18,24,36,48,60,72,96,84,108,120,156,216],
+      "edad_no_indicada": [],
+      "observaciones": []
+    }
+  },
+  "nombresEvaluaciones": {
+    "cariotipo": "Cariotipo",
+    "consultoria_genetica": "Consultoría genética",
+    "tsh_neonatal": "TSH al nacer",
+    "hemograma_frotis": "Cuadro hemático completo y frotis de sangre periférica",
+    "tsh_t4_libre": "TSH y T4 libre",
+    "valoracion_endocrinologia": "Valoración y seguimiento por endocrinología",
+    "ecocardiograma": "Ecocardiograma",
+    "potenciales_evocados_auditivos": "Potenciales evocados auditivos",
+    "audiometria_impedanciometria": "Audiometría o test auditivo comportamental e impedanciometría",
+    "control_otorrino": "Control por otorrinolaringología",
+    "polisomnograma": "Polisomnograma",
+    "rayosx_cadera": "Rayos X de cadera",
+    "radiografia_dinamica_cervical": "Radiografía dinámica cervical",
+    "tamizaje_celiaca": "Tamizaje para enfermedad celíaca",
+    "vacunas_pai": "Vacunas PAI",
+    "vacunas_no_pai": "Vacunas no PAI",
+    "valoracion_oftalmologica": "Valoración oftalmológica",
+    "valoracion_odontologica": "Valoración odontológica",
+    "valoracion_pediatrica": "Valoración pediátrica",
+    "valoracion_neuropediatria": "Valoración neuropediátrica"
+  }
+}

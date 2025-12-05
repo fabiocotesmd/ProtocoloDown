@@ -1,0 +1,39 @@
+# Dependencias
+node_modules/
+
+# Build output
+dist/
+release/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+nul
+
+# IDE
+.vscode/
+.idea/
+
+# Electron
+*.exe
+*.dmg
+*.app
+
+# Archivos de usuario de Electron
+registros/
+
+# Certificados y claves privadas (NO COMPARTIR)
+*.pfx
+*.p12
+*.cer
+*.crt
+*.key
+codesign-cert.*
+
+# Variables de entorno con contraseñas
+.env
+.env.local

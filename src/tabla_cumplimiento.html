@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Evaluación Médica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 10px;
+            border: 2px solid black;
+        }
+        
+        th, td {
+            border: 2px solid black !important;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0px;
+            height: 25px;
+        }
+        
+        .evaluacion-header {
+            writing-mode: horizontal-tb;
+            text-orientation: mixed;
+            width: 150px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .age-header {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            height: 100px;
+            min-height: 100px;
+            width: 25px;
+            font-size: 9px;
+            background-color: #f0f0f0;
+            text-align: center;
+            vertical-align: middle;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding-left: 2px;
+            padding-right: 2px;
+            border: 2px solid black !important;
+        }
+        
+        .observaciones-header {
+            width: 300px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        
+        .evaluacion-cell {
+            text-align: left;
+            padding-left: 5px;
+            font-size: 9px;
+            width: 150px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .checkbox-cell {
+            width: 25px;
+            height: 25px;
+        }
+        
+        .checkbox-cell-marked {
+            width: 25px;
+            height: 25px;
+            font-weight: normal;
+            font-size: 12px;
+        }
+        
+        .checkbox-cell-shaded {
+            width: 25px;
+            height: 25px;
+            background-color: #bdc3c7;
+        }
+        
+        .observaciones-cell {
+            text-align: left;
+            padding: 3px;
+            font-size: 8px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="evaluacion-header">EVALUACION</th>
+                    <th class="age-header" style="writing-mode: vertical-rl; transform: rotate(180deg); height: 100px; min-height: 100px;">Recién Nacido</th>
+                <th class="age-header">1 a 6 meses</th>
+                <th class="age-header">7 a 12 meses</th>
+                <th class="age-header">1 año y medio</th>
+                <th class="age-header">Dos Años</th>
+                <th class="age-header">Tres Años</th>
+                <th class="age-header">Cuatro Años</th>
+                <th class="age-header">Cinco Años</th>
+                <th class="age-header">Seis Años</th>
+                <th class="age-header">Siete Años</th>
+                <th class="age-header">Ocho Años</th>
+                <th class="age-header">Nueve Años</th>
+                <th class="age-header">Diez Años</th>
+                <th class="age-header">De Diez a Trece Años</th>
+                <th class="age-header">De Catorce a Dieciocho años</th>
+                <th class="observaciones-header">OBSERVACIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="evaluacion-cell">Cariotipo</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="observaciones-cell">Una vez. También aplica si hubo cordocentesis o amniocentesis. Confirmar diagnóstico y tipo de trisomía</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Consultoría genética</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="observaciones-cell">Asesoría de condición genética</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">TSH al Nacer</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="observaciones-cell">Detectar Hipotiroidismo</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Cuadro Hemático Completo y Frotis de Sangre periférica</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="observaciones-cell">Por riesgo aumentado de desorden mieloproliferativo.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">TSH y T4 libre</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="observaciones-cell">A los 3 meses y luego anual indefinidamente. Por riesgo aumentado de hipotiroidismo.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Valoración y seguimiento por Endocrinología</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">En caso de TSH y T4 libre alterados.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Ecocardiograma</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="observaciones-cell">Recién nacido, 6 meses, un año y luego anualmente por riesgo aumentado de hipertensión pulmonar (HTP) en cualquier momento de la vida.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Potenciales evocados auditivos con umbral para onda V en todas las frecuencias</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="observaciones-cell">Seis meses, un año y luego anualmente hasta los cuatro años, por riesgo de demora en la maduración en la vía auditiva y o hipoacusia neuro sensorial.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Audiometría o test auditivo comportamental e impedanciometría</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">A partir de los 4 años cuando el niño ya colabora. De ahí para adelante, una vez al año hasta los 18 años.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Control con Otorrinolaringología</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="observaciones-cell">Para seguimiento de posibles alteraciones en oído nariz y garganta. Mayor riesgo de hipoacusia conductiva y alteraciones en conductos estrechos.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Polisomnograma</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">En niños dependientes de oxígeno sin HTP para valorar síndrome de apnea e hipoapnea de sueño. En los niños con HTP para descartar, como factor predisponente, las apneas e hipoapneas. Control anual hasta que se de alta de síndromes.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Rayos X de cadera</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="observaciones-cell">Tres meses para detectar posible displasia de cadera y luego a los cinco años y doce años por riesgo aumentado de luxación de cadera.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Radiografía lateral dinámica de columna cervical</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="observaciones-cell">Por riesgo aumentado de subluxación atlanto axial.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Tamizaje para enfermedad Celiaca (AcIgA total y anti-endomisial)</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">En niños mayores de seis meses con diarrea persistente sin explicación aparente. Detectar la alergia a la proteína del gluten de algunos cereales.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Vacunas: PAI</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">BCG, Hepatitis B, DPT, Polio, Haemophilus Influenzae, Neumococo, Rotavirus, Triple Viral, Fiebre Amarilla, Influenza.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Vacunas no PAI</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">Por el riesgo de deficiencia de inmunoglobulina G, se recomienda el esquema de Neumococo "3 + 1" (2,4,6,15 meses). Varicela, Hepatitis A, Meningococo. En mayores de 2 -10 años aplicar la vacuna del VPH. Para displasia humana severa en niños y en niñas)</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Valoración oftalmológica</td>
+                <td class="checkbox-cell-shaded"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">Al nacer para descartar cataratas congénitas. Luego a partir del año por mayor riesgo de vicios de refracción</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Valoración por odontólogo</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">Cada 6 meses a partir de los 2 años.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Valoración pediátrica: crecimiento, desarrollo</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">Durante el primer año cada mes, de los 2 a los 5 años tres veces al año, después de los 5 años anualmente.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Valoración por Neuropediatría</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell-marked">X</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="observaciones-cell">Al año y luego dependiendo del desarrollo y/o de alguna condición asociada.</td>
+            </tr>
+            <tr>
+                <td class="evaluacion-cell">Cumplimiento del protocolo</td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>
+                <td class="checkbox-cell"></td>

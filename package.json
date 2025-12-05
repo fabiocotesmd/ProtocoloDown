@@ -1,0 +1,81 @@
+{
+  "name": "cumplimiento-protocolo-down",
+  "version": "1.4.0",
+  "main": "main.js",
+  "description": "Aplicación Electron para el cumplimiento del protocolo Down",
+  "author": "Dr. Víctor Mora & Dr. Fabio Cotes",
+  "license": "MIT",
+  "copyright": "© 2024 Dr. Víctor Mora & Dr. Fabio Cotes",
+  "scripts": {
+    "start": "electron .",
+    "build": "node simple-build.js",
+    "build-installer": "node build-and-sign.js",
+    "build-portable": "electron-builder --win portable",
+    "build-packaged": "electron-packager . \"Cumplimiento Protocolo Down\" --platform=win32 --arch=x64 --out=release --overwrite --ignore=\"^/(release|dist|node_modules/.cache|OtrosDown)\"",
+    "dist": "electron-builder --publish=never",
+    "package": "electron-packager . \"Cumplimiento Protocolo Down\" --platform=win32 --arch=x64 --out=release --overwrite --ignore=\"^/(release|dist|node_modules/.cache|OtrosDown)\"",
+    "create-cert": "powershell -ExecutionPolicy Bypass -File create-cert.ps1"
+  },
+  "build": {
+    "appId": "com.complemento.cumplimiento-protocolo-down",
+    "productName": "Cumplimiento Protocolo Down",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "registros/**/*.json",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "favicon.png",
+      "publisherName": "Dr. Víctor Mora & Dr. Fabio Cotes",
+      "verifyUpdateCodeSignature": false
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "artifactName": "${productName}-${version}-setup.exe",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Cumplimiento Protocolo Down",
+      "license": "LICENSE"
+    }
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "electron": "^29.4.6",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "makensis": "^3.0.3",
+    "png-to-ico": "^3.0.1"
+  }
+}

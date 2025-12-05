@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(dir 'C:\\Program Files (x86)\\Windows Kits' /s /b)",
+      "Bash(findstr:*)",
+      "Bash(cmd /c \"dir \"\"C:\\Program Files (x86)\\Windows Kits\"\" /s /b 2>nul | findstr /i signtool.exe\")",
+      "Bash(cmd /c \"if exist \"\"C:\\Program Files (x86)\\Windows Kits\"\" (echo EXISTS) else (echo NOT_FOUND)\")",
+      "Bash(powershell:*)",
+      "Bash(npm install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
